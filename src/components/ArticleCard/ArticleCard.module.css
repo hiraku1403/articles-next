@@ -1,0 +1,103 @@
+.card {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 2rem;
+  padding: 2.25rem 0;
+  border-bottom: 1px solid var(--borda-dim);
+  text-decoration: none;
+  color: inherit;
+  transition: opacity .2s;
+}
+
+.card:hover { opacity: .85; }
+.card:hover .titulo { color: var(--acento); }
+
+.corpo { display: flex; flex-direction: column; gap: 0.65rem; }
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--fonte-ui);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--texto-muted);
+}
+
+.metaSep { color: var(--borda); }
+
+.categoria { color: var(--acento); }
+
+.titulo {
+  font-family: var(--fonte-display);
+  font-size: clamp(1.3rem, 2.5vw, 1.65rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--texto);
+  transition: color .2s;
+}
+
+.resumo {
+  font-size: 0.97rem;
+  color: var(--texto-dim);
+  line-height: 1.65;
+}
+
+.rodape {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--fonte-ui);
+  font-size: 0.8rem;
+  color: var(--texto-muted);
+}
+
+.autor { color: var(--texto-dim); font-weight: 500; }
+
+.lerMais {
+  margin-left: auto;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--acento);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: gap .2s;
+}
+
+.card:hover .lerMais { gap: .45rem; }
+
+/* Imagem */
+.imagemWrap {
+  position: relative;
+  border-radius: var(--raio);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  flex-shrink: 0;
+}
+
+.imagem { object-fit: cover; transition: transform .5s; }
+.card:hover .imagem { transform: scale(1.04); }
+
+/* Card destaque (primeiro artigo) */
+.cardDestaque {
+  grid-template-columns: 1fr;
+  padding-bottom: 2.5rem;
+}
+
+.cardDestaque .imagemWrap {
+  aspect-ratio: 16/7;
+  order: -1;
+  margin-bottom: 0.5rem;
+}
+
+.cardDestaque .titulo { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+
+@media (max-width: 700px) {
+  .card { grid-template-columns: 1fr; }
+  .imagemWrap { aspect-ratio: 16/9; order: -1; }
+}
