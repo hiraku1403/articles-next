@@ -1,18 +1,19 @@
 .wrapper { min-height: 100dvh; display: flex; flex-direction: column; }
 
-/* Header */
 .header {
   position: sticky; top: 0; z-index: 50;
   background: rgba(249,245,238,.93);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--borda);
+  /* Altura fixa reservada — impede shift ao carregar */
+  height: 4rem;
 }
 
 .headerInner {
   max-width: var(--max-w);
   margin: 0 auto;
   padding: 0 2rem;
-  height: 4rem;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -47,10 +48,8 @@
 .navLink:hover { color: var(--texto); background: rgba(139,58,30,.07); }
 .navLinkAtivo  { color: var(--acento); font-weight: 600; }
 
-/* Main */
 .main { flex: 1; }
 
-/* Footer */
 .footer {
   border-top: 1px solid var(--borda);
   padding: 2.5rem 2rem;

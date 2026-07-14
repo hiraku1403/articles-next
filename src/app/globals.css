@@ -1,4 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,600&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap');
+/* ─────────────────────────────────────────────────────────────
+   globals.css
+
+   OTIMIZAÇÃO — o @import de fontes do Google foi REMOVIDO daqui.
+   As fontes agora são carregadas via next/font (ver fonts.ts),
+   e expostas como variáveis CSS (--font-display, --font-corpo,
+   --font-ui) aplicadas no elemento <html> em layout.tsx.
+   ───────────────────────────────────────────────────────────── */
 
 :root {
   --bg:           #F9F5EE;
@@ -13,9 +20,9 @@
   --acento-hover: #72301A;
   --verde:        #2D5A3D;
 
-  --fonte-display: 'Fraunces', Georgia, serif;
-  --fonte-corpo:   'Lora', Georgia, serif;
-  --fonte-ui:      'DM Sans', sans-serif;
+  --fonte-display: var(--font-display), Georgia, serif;
+  --fonte-corpo:   var(--font-corpo), Georgia, serif;
+  --fonte-ui:      var(--font-ui), sans-serif;
 
   --max-w:       1100px;
   --max-w-texto: 680px;

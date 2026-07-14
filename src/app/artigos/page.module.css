@@ -1,56 +1,10 @@
-.banner {
-  background: var(--texto);
-  padding: 3.5rem 2rem;
-}
+.banner { background: var(--texto); padding: 3.5rem 2rem; }
 .bannerInner { max-width: var(--max-w); margin: 0 auto; }
-
-.kicker {
-  font-family: var(--fonte-ui);
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--acento);
-  margin-bottom: 0.6rem;
-}
-
-.titulo {
-  font-family: var(--fonte-display);
-  font-size: clamp(2rem, 5vw, 3rem);
-  color: #fff;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.5rem;
-}
-
-.subtitulo {
-  color: rgba(255,255,255,.5);
-  font-size: 0.95rem;
-  font-style: italic;
-}
-
+.kicker { font-family: var(--fonte-ui); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--acento); margin-bottom: 0.6rem; }
+.titulo { font-family: var(--fonte-display); font-size: clamp(2rem, 5vw, 3rem); color: #fff; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
+.subtitulo { color: rgba(255,255,255,.5); font-size: 0.95rem; font-style: italic; }
 .conteudo { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem 5rem; }
-
-.sectionHeader {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  padding: 2rem 0 0.5rem;
-  border-bottom: 2px solid var(--texto);
-  margin-bottom: 0;
-}
-
-.sectionTitulo {
-  font-family: var(--fonte-ui);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
+.sectionHeader { display: flex; align-items: baseline; justify-content: space-between; padding: 2rem 0 0.5rem; border-bottom: 2px solid var(--texto); margin-bottom: 0; }
+.sectionTitulo { font-family: var(--fonte-ui); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
 .total { font-family: var(--fonte-ui); font-size: 0.72rem; color: var(--texto-muted); }
-
-@media (max-width: 600px) {
-  .banner { padding: 2.5rem 1.25rem; }
-  .conteudo { padding: 0 1.25rem 3rem; }
-}
+@media (max-width: 600px) { .banner { padding: 2.5rem 1.25rem; } .conteudo { padding: 0 1.25rem 3rem; } }

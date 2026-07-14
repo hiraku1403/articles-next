@@ -27,7 +27,6 @@
 }
 
 .metaSep { color: var(--borda); }
-
 .categoria { color: var(--acento); }
 
 .titulo {
@@ -71,26 +70,32 @@
 
 .card:hover .lerMais { gap: .45rem; }
 
-/* Imagem */
+/*
+  OTIMIZAÇÃO DE CLS #2 — Container de imagem com aspect-ratio FIXO.
+  O espaço da imagem é reservado no layout ANTES da imagem carregar,
+  então quando ela chega, nada se move. Isso é essencial ao usar
+  next/image com `fill` (que precisa de um pai posicionado com
+  dimensões definidas).
+*/
 .imagemWrap {
   position: relative;
   border-radius: var(--raio);
   overflow: hidden;
-  aspect-ratio: 4/3;
+  aspect-ratio: 4 / 3;   /* espaço reservado antes do load */
   flex-shrink: 0;
+  background: var(--bg-alt); /* placeholder visual enquanto carrega */
 }
 
 .imagem { object-fit: cover; transition: transform .5s; }
 .card:hover .imagem { transform: scale(1.04); }
 
-/* Card destaque (primeiro artigo) */
 .cardDestaque {
   grid-template-columns: 1fr;
   padding-bottom: 2.5rem;
 }
 
 .cardDestaque .imagemWrap {
-  aspect-ratio: 16/7;
+  aspect-ratio: 16/7;  /* espaço reservado — herói também não pula */
   order: -1;
   margin-bottom: 0.5rem;
 }

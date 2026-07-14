@@ -1,4 +1,3 @@
-// app/artigos/page.tsx — Listagem completa
 import type { Metadata } from "next";
 import ArticleCard from "@/components/ArticleCard/ArticleCard";
 import type { Artigo } from "@/types/artigo";
@@ -14,7 +13,6 @@ export const dynamic = "force-static";
 
 export default async function ArtigosPage() {
   const artigos = artigosData as Artigo[];
-
   return (
     <>
       <div className={styles.banner}>
@@ -24,7 +22,6 @@ export default async function ArtigosPage() {
           <p className={styles.subtitulo}>Ensaios sobre o que importa pensar.</p>
         </div>
       </div>
-
       <div className={styles.conteudo}>
         <div className={styles.sectionHeader}>
           <span className={styles.sectionTitulo}>Publicações</span>

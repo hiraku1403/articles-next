@@ -1,5 +1,4 @@
-// app/page.tsx — Página inicial
-// Server Component com async data fetching
+// app/page.tsx — Página inicial (Server Component, force-static)
 import type { Metadata } from "next";
 import Link from "next/link";
 import ArticleCard from "@/components/ArticleCard/ArticleCard";
@@ -12,11 +11,9 @@ export const metadata: Metadata = {
   description: "Ensaios e reflexões sobre cultura, arte, filosofia e urbanismo.",
 };
 
-// SSG: página estática pré-renderizada (force-static)
 export const dynamic = "force-static";
 
 export default async function HomePage() {
-  // Simula async data fetching com JSON local
   const artigos = artigosData as Artigo[];
   const destaque = artigos[0];
   const demais   = artigos.slice(1, 4);
@@ -40,7 +37,6 @@ export default async function HomePage() {
         <div className={styles.sectionHeader}>
           <span className={styles.sectionTitulo}>Artigo em destaque</span>
         </div>
-        {/* Server Component renderiza direto — sem useEffect */}
         <ArticleCard artigo={destaque} destaque />
 
         <div className={styles.sectionHeader}>
